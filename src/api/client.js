@@ -1,5 +1,4 @@
-
-export const BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
+export const BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, ""); 
 
 const TOKEN_KEY = "shopco_token";
 const GUEST_KEY = "shopco_guestid";
