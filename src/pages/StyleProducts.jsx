@@ -12,7 +12,7 @@ export default function StyleProductsPage() {
     setError("");
     setProducts(null);
     return api
-      .products({ style: styleName, limit: 20 })
+      .products({ style: styleName, limit: 8 })
       .then(setProducts)
       .catch((err) => {
         setProducts(null);
@@ -25,7 +25,7 @@ export default function StyleProductsPage() {
     setError("");
     setProducts(null);
     api
-      .products({ style: styleName, limit: 20 })
+      .products({ style: styleName, limit: 8 })
       .then((items) => active && setProducts(items))
       .catch((err) => {
         if (!active) return;
