@@ -1,17 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { api, BASE_URL } from "@/api/client";
 
-<<<<<<< HEAD
-/**
- * Backend ek alag project hai — agar wo chal nahi raha to poora page khali
- * dikhta hai. Ye banner turant bata deta hai ke masla kya hai aur kya karna hai.
- */
-export function BackendStatus() {
-  const [state, setState] = useState("checking"); // checking | up | down
-=======
 export function BackendStatus() {
   const [state, setState] = useState("checking"); 
->>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
+
   const [dbWarning, setDbWarning] = useState(null);
   const [retrying, setRetrying] = useState(false);
 
@@ -28,18 +20,10 @@ export function BackendStatus() {
 
   useEffect(() => {
     check();
-<<<<<<< HEAD
-    // backend baad me start ho jaye to banner khud hat jaye
-=======
->>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
     const timer = setInterval(check, 5000);
     return () => clearInterval(timer);
   }, [check]);
 
-<<<<<<< HEAD
-  // Backend chal raha hai, magar aapka MONGODB_URI fail hua
-=======
->>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
   if (state === "up" && dbWarning) {
     return (
       <div className="border-b border-[#FFB020] bg-[#FFF8E6]">
