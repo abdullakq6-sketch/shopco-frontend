@@ -6,26 +6,6 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-<<<<<<< HEAD
-export default defineConfig({
-  root: __dirname,
-
-  // base: "/shopco-frontend/",
-
-  plugins: [react(), tailwindcss()],
-
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-  },
-
-  server: {
-    port: 5173,
-    strictPort: false,
-  },
-
-=======
 const BACKEND = process.env.VITE_BACKEND_ORIGIN || "http://localhost:5000";
 
 export default defineConfig({
@@ -63,13 +43,8 @@ export default defineConfig({
       },
     },
   },
->>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
   build: {
     outDir: "dist",
     emptyOutDir: true,
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
