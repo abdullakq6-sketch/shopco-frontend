@@ -186,7 +186,11 @@ export default function CartPage() {
                       ? "Promo code applied!"
                       : "That promo code is not valid.",
                   );
+<<<<<<< HEAD
                 }}
+=======
+                }} 
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
               >
                 <label className="flex h-12 flex-1 items-center gap-3 rounded-full bg-[#F0F0F0] px-4">
                   <svg

@@ -40,7 +40,11 @@ export function Navbar() {
         </button>
 
         <Link to="/" className="font-display text-[25px] leading-none sm:text-[32px]">
+<<<<<<< HEAD
           <img src="/images/logo.svg" alt="SHOP.CO" className="h-8 w-auto" />
+=======
+          SHOP.CO
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

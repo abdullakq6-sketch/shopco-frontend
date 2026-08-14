@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 export const BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
+=======
+export const BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, ""); 
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
 
 const TOKEN_KEY = "shopco_token";
 const GUEST_KEY = "shopco_guestid";
@@ -75,6 +79,10 @@ async function request(path, options = {}) {
 export const api = {
   health: () => request("/health"),
 
+<<<<<<< HEAD
+=======
+  /* products */
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
   products: ({ section, style, limit } = {}) => {
     const q = new URLSearchParams();
     if (section) q.set("section", section);
@@ -84,6 +92,10 @@ export const api = {
   },
   product: (slug) => request(`/products/${slug}`),
 
+<<<<<<< HEAD
+=======
+  /* cart */
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
   getCart: () => request("/cart"),
   addToCart: (body) => request("/cart", { method: "POST", body: JSON.stringify(body) }),
   updateCartItem: (id, quantity) =>
@@ -91,8 +103,16 @@ export const api = {
   removeCartItem: (id) => request(`/cart/${id}`, { method: "DELETE" }),
   clearCart: () => request("/cart", { method: "DELETE" }),
 
+<<<<<<< HEAD
   me: () => request("/profile"),
   login: (body) => request("/login", { method: "POST", body: JSON.stringify(body) }),
   signup: (body) => request("/signup", { method: "POST", body: JSON.stringify(body) }),
   logout: async () => ({ success: true }), 
+=======
+  /* auth */
+  me: () => request("/profile"),
+  login: (body) => request("/login", { method: "POST", body: JSON.stringify(body) }),
+  signup: (body) => request("/signup", { method: "POST", body: JSON.stringify(body) }),
+  logout: async () => ({ success: true }),
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
 };

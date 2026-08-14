@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 dist/
 .env
@@ -6,3 +7,8 @@ dist/
 npm-debug.log*
 .DS_Store
 .vite/
+=======
+node_modules
+.env
+dist
+>>>>>>> 6b0aef3c01bcc7479348ee62034be9756067b937
