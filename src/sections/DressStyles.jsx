@@ -37,7 +37,7 @@ export function DressStyles() {
           {STYLES.map((style) => (
             <a
               key={style.name}
-              href={`/products?style=${style.name.toLowerCase()}`}
+              href="/product/one-life-graphic-t-shirt"
               className={`group relative block h-[190px] overflow-hidden rounded-[20px] bg-white lg:h-[289px] ${style.span}`}
             >
               <img

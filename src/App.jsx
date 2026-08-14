@@ -10,8 +10,6 @@ import HomePage from "@/pages/Home";
 import ProductDetailPage from "@/pages/ProductDetail";
 import CartPage from "@/pages/Cart";
 import NotFoundPage from "@/pages/NotFound";
-import Product from "@/pages/Product";
-
 
 export default function App() {
   return (
@@ -26,7 +24,6 @@ export default function App() {
             <Route path="/product/:slug" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="*" element={<NotFoundPage />} />
-            <Route path="/product" element={<Product />} />
           </Routes>
         </main>
         <Newsletter />
