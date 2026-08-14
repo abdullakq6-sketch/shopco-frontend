@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const STYLES = [
   {
     name: "Casual",
@@ -35,9 +37,9 @@ export function DressStyles() {
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-5 lg:mt-16 lg:gap-5">
           {STYLES.map((style) => (
-            <a
+            <Link
               key={style.name}
-              href="/product/one-life-graphic-t-shirt"
+              to={`/style/${style.name.toLowerCase()}`}
               className={`group relative block h-[190px] overflow-hidden rounded-[20px] bg-white lg:h-[289px] ${style.span}`}
             >
               <img
@@ -49,7 +51,7 @@ export function DressStyles() {
               <span className="absolute left-6 top-4 text-2xl font-bold text-white drop-shadow-md lg:left-9 lg:top-6 lg:text-[36px]">
                 {style.name}
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import HomePage from "@/pages/Home";
 import ProductDetailPage from "@/pages/ProductDetail";
 import CartPage from "@/pages/Cart";
+import StyleProductsPage from "@/pages/StyleProducts";
 import NotFoundPage from "@/pages/NotFound";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:slug" element={<ProductDetailPage />} />
+            <Route path="/style/:styleName" element={<StyleProductsPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
