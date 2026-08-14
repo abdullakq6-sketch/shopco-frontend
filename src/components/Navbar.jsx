@@ -41,7 +41,6 @@ export function Navbar() {
 
         <Link to="/" className="font-display text-[25px] leading-none sm:text-[32px]">
           <img src="/images/logo.svg" alt="SHOP.CO" className="h-8 w-auto" />
-          SHOP.CO
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
