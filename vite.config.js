@@ -10,10 +10,15 @@ const BACKEND = process.env.VITE_BACKEND_ORIGIN || "http://localhost:5000";
 
 export default defineConfig({
   root: __dirname,
+
   plugins: [react(), tailwindcss()],
+
   resolve: {
-    alias: { "@": path.resolve(__dirname, "src") },
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
+
   server: {
     port: 5173,
     strictPort: false,
@@ -43,6 +48,7 @@ export default defineConfig({
       },
     },
   },
+
   build: {
     outDir: "dist",
     emptyOutDir: true,
