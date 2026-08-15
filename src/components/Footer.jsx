@@ -20,6 +20,29 @@ const COLUMNS = [
   },
 ];
 
+const SOCIAL_LINKS = [
+   {
+    icon: TwitterIcon,
+    url: "https://twitter.com/YOUR_TWITTER_USERNAME",
+    label: "Twitter",
+  },
+  {
+    icon: FacebookIcon,
+    url: "https://www.facebook.com/YOUR_FACEBOOK_USERNAME",
+    label: "Facebook",
+  },
+  {
+    icon: InstagramIcon,
+    url: "https://www.instagram.com/w_abdullah_rajput_4238?igsh=NnI1dWMyZzIzZXdq",
+    label: "Instagram",
+  },
+  {
+    icon: GithubIcon,
+    url: "https://github.com/abdullakq6-sketch",
+    label: "GitHub",
+  },
+];
+
 const PAYMENTS = [
   { label: "VISA", className: "font-serif italic font-bold text-[#1A1F71] text-[13px]" },
   { label: "master", className: "font-bold text-[#EB001B] text-[12px]" },
@@ -39,18 +62,20 @@ export function Footer() {
               We have clothes that suits your style and which you&apos;re proud to wear. From
               women to men.
             </p>
-            <div className="mt-5 flex items-center gap-3">
-              {[TwitterIcon, FacebookIcon, InstagramIcon, GithubIcon].map((Icon, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  aria-label="Social link"
-                  className="flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white text-black transition hover:bg-black hover:text-white"
-                >
-                  <Icon width={15} height={15} />
-                </button>
-              ))}
-            </div>
+               <div className="mt-5 flex items-center gap-3">
+  {SOCIAL_LINKS.map(({ icon: Icon, url, label }) => (
+    <a
+      key={label}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white text-black transition hover:bg-black hover:text-white"
+    >
+      <Icon width={15} height={15} />
+    </a>
+  ))}
+</div>
           </div>
 
           {COLUMNS.map((column) => (
